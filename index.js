@@ -9,6 +9,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (_req, res) => res.send('Server started'));
 
+app.use('/api', require('./routers/index'))
+
 const { MONGO_URI, PORT } = process.env;
 
 mongoose.connect(MONGO_URI).then((res) => {
