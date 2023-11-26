@@ -6,8 +6,8 @@ router.route('/').get(task.getAll);
 router.route('/add').post(task.add);   
 router.route('/:id')
     .get(task.getById) 
-    .put(task.update)
-    .patch(task.updateTask)
+    .patch(task.update) 
     .delete(task.delete)
+router.route('/updateStatus/:id').patch(task.updateStatus);   
 
 module.exports = router;

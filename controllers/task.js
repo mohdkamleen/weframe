@@ -55,7 +55,7 @@ module.exports.update = async (req, res, next) => {
   };
 
   // route for update the task 
-  module.exports.updateTask = async (req, res, next) => {
+  module.exports.updateStatus = async (req, res, next) => {
     try { 
       const task = await Task.findByIdAndUpdate(req.params.id, { $push: { status: req.body } });
       res.status(200).json(task);
