@@ -8,7 +8,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (_req, res) => res.send('Server started'));
- 
 
 const { MONGO_URI, PORT } = process.env;
 
