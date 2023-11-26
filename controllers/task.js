@@ -2,7 +2,7 @@ const Task = require("../models/task");
 
 // route for add new task  
 module.exports.add = async (req, res, next) => {
-    if(!(req.title,req.description,req.assignedUser,req.dueTo)){
+    if(!(req.title && req.description && req.assignedUser && req.dueTo)){
         return res.status(400).json({message:"All feild are required."})
     }
   try { 
